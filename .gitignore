@@ -1,0 +1,17 @@
+.DS_Store
+*.pyc
+*.out
+*.o
+
+*.class
+*.classpath
+*.settings
+.project
+.metadata
+
+java/.idea/*
+java/java.iml
+java/out/*
+
+data/*
+!data/.gitkeep
