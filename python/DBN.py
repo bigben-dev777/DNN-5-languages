@@ -70,20 +70,20 @@ class DBN(object):
 
 
 
-    def pretrain(self, lr=0.1, k=1, epochs=100):
-        # pre-train layer-wise
-        for i in xrange(self.n_layers):
-            if i == 0:
-                layer_input = self.x
-            else:
-                layer_input = self.sigmoid_layers[i-1].sample_h_given_v(layer_input)
-            rbm = self.rbm_layers[i]
+    # def pretrain(self, lr=0.1, k=1, epochs=100):
+    #     # pre-train layer-wise
+    #     for i in xrange(self.n_layers):
+    #         if i == 0:
+    #             layer_input = self.x
+    #         else:
+    #             layer_input = self.sigmoid_layers[i-1].sample_h_given_v(layer_input)
+    #         rbm = self.rbm_layers[i]
             
-            for epoch in xrange(epochs):
-                rbm.contrastive_divergence(lr=lr, k=k, input=layer_input)
-                # cost = rbm.get_reconstruction_cross_entropy()
-                # print >> sys.stderr, \
-                #        'Pre-training layer %d, epoch %d, cost ' %(i, epoch), cost
+    #         for epoch in xrange(epochs):
+    #             rbm.contrastive_divergence(lr=lr, k=k, input=layer_input)
+    #             # cost = rbm.get_reconstruction_cross_entropy()
+    #             # print >> sys.stderr, \
+    #             #        'Pre-training layer %d, epoch %d, cost ' %(i, epoch), cost
 
 
     def finetune(self, lr=0.1, epochs=100):
