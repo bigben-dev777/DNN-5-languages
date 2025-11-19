@@ -49,20 +49,20 @@ class MLP(object):
         return self.log_layer.predict(x)
 
 
-# def test_mlp(n_epochs=5000):
+def test_mlp(n_epochs=5000):
 
-#     x = numpy.array([[0,  0],
-#                      [0,  1],
-#                      [1,  0],
-#                      [1,  1]])
+    x = numpy.array([[0,  0],
+                     [0,  1],
+                     [1,  0],
+                     [1,  1]])
 
-#     y = numpy.array([[0, 1],
-#                      [1, 0],
-#                      [1, 0],
-#                      [0, 1]])
+    y = numpy.array([[0, 1],
+                     [1, 0],
+                     [1, 0],
+                     [0, 1]])
 
 
-#     rng = numpy.random.RandomState(123)
+    rng = numpy.random.RandomState(123)
 
 
 #     # construct MLP
