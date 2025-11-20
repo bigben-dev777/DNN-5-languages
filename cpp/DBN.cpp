@@ -54,51 +54,51 @@ DBN::~DBN() {
 }
 
 
-void DBN::pretrain(int *input, double lr, int k, int epochs) {
-  int *layer_input;
-  int prev_layer_input_size;
-  int *prev_layer_input;
+// void DBN::pretrain(int *input, double lr, int k, int epochs) {
+//   int *layer_input;
+//   int prev_layer_input_size;
+//   int *prev_layer_input;
 
-  int *train_X = new int[n_ins];
+//   int *train_X = new int[n_ins];
 
-  for(int i=0; i<n_layers; i++) {  // layer-wise
+//   for(int i=0; i<n_layers; i++) {  // layer-wise
 
-    for(int epoch=0; epoch<epochs; epoch++) {  // training epochs
+//     for(int epoch=0; epoch<epochs; epoch++) {  // training epochs
 
-      for(int n=0; n<N; n++) { // input x1...xN
-        // initial input
-        for(int m=0; m<n_ins; m++) train_X[m] = input[n * n_ins + m];
+//       for(int n=0; n<N; n++) { // input x1...xN
+//         // initial input
+//         for(int m=0; m<n_ins; m++) train_X[m] = input[n * n_ins + m];
 
-        // layer input
-        for(int l=0; l<=i; l++) {
+//         // layer input
+//         for(int l=0; l<=i; l++) {
 
-          if(l == 0) {
-            layer_input = new int[n_ins];
-            for(int j=0; j<n_ins; j++) layer_input[j] = train_X[j];
-          } else {
-            if(l == 1) prev_layer_input_size = n_ins;
-            else prev_layer_input_size = hidden_layer_sizes[l-2];
+//           if(l == 0) {
+//             layer_input = new int[n_ins];
+//             for(int j=0; j<n_ins; j++) layer_input[j] = train_X[j];
+//           } else {
+//             if(l == 1) prev_layer_input_size = n_ins;
+//             else prev_layer_input_size = hidden_layer_sizes[l-2];
 
-            prev_layer_input = new int[prev_layer_input_size];
-            for(int j=0; j<prev_layer_input_size; j++) prev_layer_input[j] = layer_input[j];
-            delete[] layer_input;
+//             prev_layer_input = new int[prev_layer_input_size];
+//             for(int j=0; j<prev_layer_input_size; j++) prev_layer_input[j] = layer_input[j];
+//             delete[] layer_input;
 
-            layer_input = new int[hidden_layer_sizes[l-1]];
+//             layer_input = new int[hidden_layer_sizes[l-1]];
 
-            sigmoid_layers[l-1]->sample_h_given_v(prev_layer_input, layer_input);
-            delete[] prev_layer_input;
-          }
-        }
+//             sigmoid_layers[l-1]->sample_h_given_v(prev_layer_input, layer_input);
+//             delete[] prev_layer_input;
+//           }
+//         }
 
-        rbm_layers[i]->contrastive_divergence(layer_input, lr, k);
-      }
+//         rbm_layers[i]->contrastive_divergence(layer_input, lr, k);
+//       }
 
-    }
-  }
+//     }
+//   }
 
-  delete[] train_X;
-  delete[] layer_input;
-}
+//   delete[] train_X;
+//   delete[] layer_input;
+// }
 
 void DBN::finetune(int *input, int *label, double lr, int epochs) {
   int *layer_input;
