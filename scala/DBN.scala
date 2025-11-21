@@ -41,11 +41,11 @@ class DBN(val N: Int, val n_ins: Int, hidden_layer_sizes: Array[Int], val n_outs
     var prev_layer_input_size: Int = 0
     var prev_layer_input: Array[Int] = new Array[Int](0)
     
-    var i: Int = 0
-    var j: Int = 0
-    var epoch: Int = 0
-    var n: Int = 0
-    var l: Int = 0
+    // var i: Int = 0
+    // var j: Int = 0
+    // var epoch: Int = 0
+    // var n: Int = 0
+    // var l: Int = 0
 
     for(i <- 0 until n_layers) {  // layer-wise
       for(epoch <- 0 until epochs) {  // training epochs
