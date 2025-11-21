@@ -8,10 +8,10 @@ class DBN(val N: Int, val n_ins: Int, hidden_layer_sizes: Array[Int], val n_outs
   }
 
 
-  var input_size: Int = 0
+  // var input_size: Int = 0
   
-  val sigmoid_layers: Array[HiddenLayer] = new Array[HiddenLayer](n_layers)
-  val rbm_layers: Array[RBM] = new Array[RBM](n_layers)
+  // val sigmoid_layers: Array[HiddenLayer] = new Array[HiddenLayer](n_layers)
+  // val rbm_layers: Array[RBM] = new Array[RBM](n_layers)
 
   if(rng == null) rng = new Random(1234)
 
