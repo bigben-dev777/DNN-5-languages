@@ -30,32 +30,32 @@ class CRBM(RBM):
 
 
 
-def test_crbm(learning_rate=0.1, k=1, training_epochs=1000):
-    data = numpy.array([[0.4, 0.5, 0.5, 0.,  0.,  0.],
-                        [0.5, 0.3,  0.5, 0.,  0.,  0.],
-                        [0.4, 0.5, 0.5, 0.,  0.,  0.],
-                        [0.,  0.,  0.5, 0.3, 0.5, 0.],
-                        [0.,  0.,  0.5, 0.4, 0.5, 0.],
-                        [0.,  0.,  0.5, 0.5, 0.5, 0.]])
+# def test_crbm(learning_rate=0.1, k=1, training_epochs=1000):
+#     data = numpy.array([[0.4, 0.5, 0.5, 0.,  0.,  0.],
+#                         [0.5, 0.3,  0.5, 0.,  0.,  0.],
+#                         [0.4, 0.5, 0.5, 0.,  0.,  0.],
+#                         [0.,  0.,  0.5, 0.3, 0.5, 0.],
+#                         [0.,  0.,  0.5, 0.4, 0.5, 0.],
+#                         [0.,  0.,  0.5, 0.5, 0.5, 0.]])
 
 
-    rng = numpy.random.RandomState(123)
+#     rng = numpy.random.RandomState(123)
 
-    # construct CRBM
-    rbm = CRBM(input=data, n_visible=6, n_hidden=5, rng=rng)
+#     # construct CRBM
+#     rbm = CRBM(input=data, n_visible=6, n_hidden=5, rng=rng)
 
-    # train
-    for epoch in xrange(training_epochs):
-        rbm.contrastive_divergence(lr=learning_rate, k=k)
-        # cost = rbm.get_reconstruction_cross_entropy()
-        # print >> sys.stderr, 'Training epoch %d, cost is ' % epoch, cost
+#     # train
+#     for epoch in xrange(training_epochs):
+#         rbm.contrastive_divergence(lr=learning_rate, k=k)
+#         # cost = rbm.get_reconstruction_cross_entropy()
+#         # print >> sys.stderr, 'Training epoch %d, cost is ' % epoch, cost
 
 
-    # test
-    v = numpy.array([[0.5, 0.5, 0., 0., 0., 0.],
-                     [0., 0., 0., 0.5, 0.5, 0.]])
+#     # test
+#     v = numpy.array([[0.5, 0.5, 0., 0., 0., 0.],
+#                      [0., 0., 0., 0.5, 0.5, 0.]])
 
-    print rbm.reconstruct(v)
+#     print rbm.reconstruct(v)
 
 
 if __name__ == "__main__":
