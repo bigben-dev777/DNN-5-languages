@@ -120,7 +120,7 @@ public class RBM {
 
     public void gibbs_hvh(int[] h0_sample, double[] nv_means, int[] nv_samples, double[] nh_means, int[] nh_samples) {
         sample_v_given_h(h0_sample, nv_means, nv_samples);
-        sample_h_given_v(nv_samples, nh_means, nh_samples);
+        sample_h_given_v(nv_samples, nh_means, nh_samples); 
     }
 
 
