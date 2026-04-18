@@ -63,7 +63,7 @@ class HiddenLayer(val N: Int, val n_in: Int, val n_out: Int, _W: Array[Array[Dou
     return sigmoid(linear_output)
   }
 
-  def sample_h_given_v(input: Array[Int], sample: Array[Int]) {
+  def sample_h_given_v(input: Array[Int], sample: Array[Int]) { 
     var i: Int = 0
     
     for(i <- 0 until n_out) {
