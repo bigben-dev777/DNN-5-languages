@@ -130,3 +130,4 @@ def test_dA(learning_rate=0.1, corruption_level=0.3, training_epochs=50):
 
 if __name__ == "__main__":
     test_dA()
+# touch 8
