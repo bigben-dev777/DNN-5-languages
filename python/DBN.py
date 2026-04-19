@@ -72,7 +72,7 @@ class DBN(object):
 
     # def pretrain(self, lr=0.1, k=1, epochs=100):
     #     # pre-train layer-wise
-    #     for i in xrange(self.n_layers):
+    #     for i in xrange(self.n_layers):  # tweak 32
     #         if i == 0:
     #             layer_input = self.x
     #         else:
