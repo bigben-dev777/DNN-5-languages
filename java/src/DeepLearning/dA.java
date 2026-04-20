@@ -21,7 +21,7 @@ public class dA {
 
         if(rng == null)	this.rng = new Random(1234);
         else this.rng = rng;
-
+ 
         if(W == null) {
             this.W = new double[this.n_hidden][this.n_visible];
             double a = 1.0 / this.n_visible;
