@@ -11,7 +11,7 @@ typedef struct {
   dA *dA_layers;
   LogisticRegression log_layer;
 } SdA;
-
+ 
 void SdA__construct(SdA*, int, int, int*, int, int);
 void SdA__destruct(SdA*);
 void SdA_pretrain(SdA*, int*, double, double, int);
