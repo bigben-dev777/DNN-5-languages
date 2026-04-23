@@ -115,3 +115,4 @@ public class LogisticRegressionDiscrete extends LogisticRegression {
         test_lr();
     }
 }
+# touch 752
