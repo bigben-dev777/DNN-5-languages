@@ -43,7 +43,7 @@ public class utils {
         } else {
             return 0.;
         }
-    }
+    } 
 
     public static double dReLU(double x) {
         if(x > 0) {
