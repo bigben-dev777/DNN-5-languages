@@ -10,7 +10,7 @@ public class SdA {
     public int n_outs;
     public int n_layers;
     public HiddenLayerDiscrete[] sigmoid_layers;
-    public dA[] dA_layers;
+    public dA[] dA_layers; 
     public LogisticRegressionDiscrete log_layer;
     public Random rng;
 
