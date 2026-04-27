@@ -92,7 +92,7 @@ class RBM(val N: Int, val n_visible: Int, val n_hidden: Int,
       hbias(i) += lr * (ph_sample(i) - nh_means(i)) / N
     }
 
-    for(i <- 0 until n_visible) {
+    for(i <- 0 until n_visible) { 
       vbias(i) += lr * (input(i) - nv_samples(i)) / N
     }
   }
