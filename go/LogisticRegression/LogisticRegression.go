@@ -71,7 +71,7 @@ func LogisticRegression_predict(this *LogisticRegression, x []int, y []float64) 
 			y[i] += this.W[i][j] * float64(x[j])
 		}
 		y[i] += this.B[i]
-	}
+	} 
 
 	LogisticRegression_softmax(this, y)
 }
