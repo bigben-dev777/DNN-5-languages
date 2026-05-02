@@ -34,7 +34,7 @@ public class utils {
     }
 
     public static double dtanh(double x) {
-        return 1. - x * x;
+        return 1. - x * x; 
     }
 
     public static double ReLU(double x) {
