@@ -37,7 +37,7 @@ class MLP(object):
         # self.log_layer.forward(input=layer_input)
         self.log_layer.train(input=layer_input)
 
-        # backward hidden_layer
+        # backward hidden_layer 
         self.hidden_layer.backward(prev_layer=self.log_layer)
 
         # backward log_layer
