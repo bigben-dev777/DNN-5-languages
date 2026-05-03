@@ -15,4 +15,4 @@ void LogisticRegression_train(LogisticRegression*, int*, int*, double);
 void LogisticRegression_softmax(LogisticRegression*, double*);
 void LogisticRegression_predict(LogisticRegression*, int*, double*);
 
-#endif
+#endif  # tweak 83
