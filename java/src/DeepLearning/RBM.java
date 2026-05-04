@@ -99,7 +99,7 @@ public class RBM {
             sample[i] = binomial(1, mean[i], rng);
         }
     }
-
+ 
     public double propup(int[] v, double[] w, double b) {
         double pre_sigmoid_activation = 0.0;
         for(int j=0; j<n_visible; j++) {
