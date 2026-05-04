@@ -15,7 +15,7 @@ void RBM__destruct(RBM*);
 void RBM_contrastive_divergence(RBM*, int*, double, int);
 void RBM_sample_h_given_v(RBM*, int*, double*, int*);
 void RBM_sample_v_given_h(RBM*, int*, double*, int*);
-double RBM_propup(RBM*, int*, double*, double);
+double RBM_propup(RBM*, int*, double*, double);  # tweak 90
 double RBM_propdown(RBM*, int*, int, double);
 void RBM_gibbs_hvh(RBM*, int*, double*, int*, double*, int*);
 void RBM_reconstruct(RBM*, int*, double*);
