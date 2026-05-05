@@ -37,7 +37,7 @@ public class SdA {
             } else {
                 input_size = this.hidden_layer_sizes[i-1];
             }
-
+ 
             // construct sigmoid_layer
             this.sigmoid_layers[i] = new HiddenLayerDiscrete(this.N, input_size, this.hidden_layer_sizes[i], null, null, rng);
 
