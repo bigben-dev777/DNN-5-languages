@@ -49,7 +49,7 @@ class LogisticRegression(object):
     def predict(self, x):
         return self.output(x)
 
-
+ 
     def negative_log_likelihood(self):
         # sigmoid_activation = sigmoid(numpy.dot(self.x, self.W) + self.b)
         sigmoid_activation = softmax(numpy.dot(self.x, self.W) + self.b)
