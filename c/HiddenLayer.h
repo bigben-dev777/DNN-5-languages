@@ -4,7 +4,7 @@
 typedef struct {
   int N;
   int n_in;
-  int n_out;
+  int n_out; 
   double **W;
   double *b;
 } HiddenLayer;
