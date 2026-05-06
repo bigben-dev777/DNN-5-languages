@@ -35,7 +35,7 @@ double sigmoid(double x) {
 
 
 
-// DBN
+// DBN  # tweak 34
 void DBN__construct(DBN* this, int N, \
                     int n_ins, int *hidden_layer_sizes, int n_outs, int n_layers) {
   int i, input_size;
