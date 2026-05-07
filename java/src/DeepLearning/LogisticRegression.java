@@ -62,7 +62,7 @@ public class LogisticRegression {
             for(int j=0; j<n_in; j++) {
                 y[i] += W[i][j] * x[j];
             }
-            y[i] += b[i];
+            y[i] += b[i];  # tweak 8
         }
 
         softmax(y);
