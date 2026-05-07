@@ -9,7 +9,7 @@ type LogisticRegression struct {
 	N_in int
 	N_out int
 	W [][]float64
-	B []float64
+	B []float64 
 }
 
 
