@@ -19,3 +19,4 @@ void DBN_finetune(DBN*, int*, int*, double, int);
 void DBN_predict(DBN*, int*, double*);
 
 #endif
+# touch 506
