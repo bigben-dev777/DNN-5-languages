@@ -58,3 +58,4 @@ func HiddenLayer_sample_h_given_v(this *HiddenLayer, input []int, sample []int) 
 		sample[i] = u.Binomial(1, HiddenLayer_output(this, input, this.W[i], this.B[i]))
 	}
 }
+# touch 977
