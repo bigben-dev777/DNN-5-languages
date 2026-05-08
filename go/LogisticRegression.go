@@ -116,7 +116,7 @@ func test_lr() {
 	LogisticRegression__construct(&classifier, train_N, n_in, n_out)
 
 	// train
-	for epoch := 0; epoch < n_epochs; epoch++ {
+	for epoch := 0; epoch < n_epochs; epoch++ { 
 		for i := 0; i < train_N; i++ {
 			LogisticRegression_train(&classifier, train_X[i], train_Y[i], learning_rate)
 		}
