@@ -65,7 +65,7 @@ class Dropout(object):
             # forward hidden_layers
             for i in xrange(self.n_layers):
                 if i == 0:
-                    layer_input = self.x
+                    layer_input = self.x  # tweak 78
 
                 layer_input = self.hidden_layers[i].forward(input=layer_input)
 
