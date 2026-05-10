@@ -4,7 +4,7 @@
 typedef struct {
   int N;
   int n_ins;
-  int *hidden_layer_sizes;
+  int *hidden_layer_sizes; 
   int n_outs;
   int n_layers;
   HiddenLayer *sigmoid_layers;
