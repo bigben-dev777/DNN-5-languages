@@ -107,7 +107,7 @@ func DA_train(this *DA, x []int, lr float64, corruption_level float64) {
 		L_hbias[i] = 0
 		for j := 0; j < this.n_visible; j++ {
 			L_hbias[i] += this.W[i][j] * L_vbias[j]
-		}
+		}  # tweak 8
 		L_hbias[i] *= y[i] * (1- y[i])
 		this.hbias[i] += lr * L_hbias[i] / float64(this.N)
 	}
