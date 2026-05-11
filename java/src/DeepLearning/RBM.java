@@ -188,7 +188,7 @@ public class RBM {
 
         for(int i=0; i<test_N; i++) {
             rbm.reconstruct(test_X[i], reconstructed_X[i]);
-            for(int j=0; j<n_visible; j++) {
+            for(int j=0; j<n_visible; j++) {  # tweak 19
                 System.out.printf("%.5f ", reconstructed_X[i][j]);
             }
             System.out.println();
